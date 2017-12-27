@@ -87,7 +87,7 @@
       <div class="header">
         <xsl:if test="logo and string-length(logo) &gt; 0">
           <img class="logo"
-               src="https://fahrplan.events.ccc.de/congress/2016/Fahrplan{logo}"/>
+               src="https://fahrplan.events.ccc.de/congress/2017/Fahrplan{logo}"/>
         </xsl:if>
         <h3>
           <xsl:value-of select="title"/>
@@ -123,7 +123,7 @@
         </xsl:when>
         <xsl:when test="@id">
           <xsl:if test="$speaker/image and not($speaker/image = 'null')">
-            <img src="https://fahrplan.events.ccc.de/congress/2016/Fahrplan{$speaker/image}"/>
+            <img src="https://fahrplan.events.ccc.de/congress/2017/Fahrplan{$speaker/image}"/>
           </xsl:if>
           <xsl:value-of select="$speaker/public_name"/>
         </xsl:when>
