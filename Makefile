@@ -1,5 +1,8 @@
 index.html: index.unhyphenated.html
 	sed -f hyphenate.sed < $< > $@
+	git add index.html
+	git commit -m "automated commit from ci"
+
 
 index.unhyphenated.html: index.xsl everything.schedule.xml speakers.xml
 	xsltproc $< everything.schedule.xml > $@
