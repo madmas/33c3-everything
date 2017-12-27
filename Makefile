@@ -5,10 +5,10 @@ index.unhyphenated.html: index.xsl everything.schedule.xml speakers.xml
 	xsltproc $< everything.schedule.xml > $@
 
 everything.schedule.xml:
-	wget -O $@ https://fahrplan.events.ccc.de/congress/2016/Fahrplan/everything.schedule.xml
+	wget -O $@ https://events.ccc.de/congress/2017/Fahrplan/schedule.xml
 
 speakers.json:
-	wget -O $@ https://fahrplan.events.ccc.de/congress/2016/Fahrplan/speakers.json
+	wget -O $@ https://events.ccc.de/congress/2017/Fahrplan/speakers.json
 
 speakers.xml: speakers.json node_modules/js2xmlparser
 	node -e 'console.log(require("js2xmlparser").parse("speakers", JSON.parse(require("fs").readFileSync("speakers.json"))))' > $@
