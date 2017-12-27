@@ -1,4 +1,10 @@
 language: node_js
+
+before_install:
+  - "sudo apt-get update"
+  - "sudo apt-get install xsltproc"
+  - "npm config set spin false"
+
 node_js:
   - "7"
 script: make
