@@ -1,0 +1,16 @@
+language: node_js
+
+before_install:
+  - "sudo apt-get update"
+  - "sudo apt-get install xsltproc"
+  - "npm config set spin false"
+
+node_js:
+  - "7"
+script: make
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master

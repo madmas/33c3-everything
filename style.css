@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 1em 0;
+}
+
+section {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: white;
+}
+
+article {
+    flex: 1 1 auto;
+    width: 14em;
+    margin: 0.2em;
+    padding: 0.1em;
+    display: flex;
+    flex-direction: column;
+    background-color: #e8e8e8;
+    justify-content: space-between;
+}
+article * {
+    padding: 0;
+    margin: 0;
+}
+
+.meta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.meta .time {
+    font-size: 80%;
+    color: #555;
+}
+.meta .duration {
+    font-size: 80%;
+    color: #999;
+}
+.meta .room {
+    text-align: right;
+    font-size: 80%;
+    color: #777;
+    border-radius: 0.1em;
+    padding: 1px 2px;
+}
+.Saal_1 .room {
+    background-color: #2faf8f;
+    color: white;
+}
+.Saal_2 .room {
+    background-color: #2fafaf;
+    color: white;
+}
+.Saal_G .room {
+    background-color: #2fafcf;
+    color: white;
+}
+.Saal_6 .room {
+    background-color: #2fafdf;
+    color: white;
+}
+.Hall_C1 .room {
+    background-color: #cf9f00;
+    color: white;
+}
+.Hall_C2 .room {
+    background-color: #af9f00;
+    color: white;
+}
+.Hall_C3 .room {
+    background-color: #8f9f00;
+    color: white;
+}
+.Hall_C4 .room {
+    background-color: #6f9f00;
+    color: white;
+}
+
+h3 {
+    font-size: 100%;
+    font-weight: bold;
+    color: #111;
+    margin: 0;
+}
+h4 {
+    font-size: 80%;
+    font-weight: medium;
+    font-style: italic;
+    color: #333;
+    margin: 0;
+}
+.logo {
+    float: right;
+    max-height: 4em;
+    padding: 0.1em 0 0 0.2em;
+}
+
+.speakers {
+    clear: right;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.speakers li {
+    list-style-type: none;
+    color: #888;
+    font-size: 80%;
+    margin: 0.5em 0.2em 0 0.2em;
+}
+.speakers a {
+    text-decoration: none;
+    color: #77a;
+}
+.speakers img {
+    display: block;
+    height: 3em;
+}
+
+article.expandable {
+    cursor: pointer;
+}
+article .abstract {
+    white-space: pre-wrap;
+    max-height: 0;
+    overflow-y: hidden;
+    transition: max-height 0.3s ease-in;
+    font-size: 70%;
+}
+article.expand .abstract {
+    padding: 2px 4px;
+    max-height: 400px;
+    overflow-y: scroll;
+    transition: max-height 0.7s ease-out;
+}
