@@ -8,7 +8,7 @@ index.unhyphenated.html: index.xsl everything.schedule.xml speakers.xml
 	xsltproc $< everything.schedule.xml > $@
 
 everything.schedule.xml:
-	wget -O $@ https://events.ccc.de/congress/2017/Fahrplan/schedule.xml
+	wget -O $@ https://raw.githubusercontent.com/voc/34C3_schedule/master/everything.schedule.xml
 
 speakers.json:
 	wget -O $@ https://events.ccc.de/congress/2017/Fahrplan/speakers.json
